@@ -1,4 +1,4 @@
-Permafrost ERT Analysis
+## Permafrost ERT Analysis
 
 Automated algorithmic analysis of Electrical Resistivity Tomography (ERT) tomograms
 for temporal monitoring of alpine permafrost degradation.
@@ -7,11 +7,13 @@ Bachelor thesis: University of Fribourg, Institute of Geography
 Author : Mathilda Muster Labeau
 Supervisor : Dr. Coline Mollaret, Department of Geoscience
 
-Overview
+# Overview
+
 Alpine permafrost is degrading under climate change, increasing the risk of gravitational instabilities. ERT (Electrical Resistivity Tomography) is a standard geophysical method to monitor this evolution — but interpreting tomograms manually over decades of data is slow and subjective.
 This project proposes an automated Python pipeline to standardize the post-processing of inverted ERT tomograms from the IDGSP database, with a focus on temporal tracking of high-resistivity zones associated with potential permafrost.
 
-Methodology
+# Methodology
+
 The pipeline combines two complementary approaches:
 1. Dynamic segmentation (DBSCAN)
 A density-based clustering algorithm adapted for ERT data. Unlike fixed rectangular ROIs, DBSCAN detects resistive bodies of arbitrary shape while penalizing unreliable deep measurements via coverage-weighted distances.
@@ -41,7 +43,7 @@ Temporal tracking with geometric indicators (area, length, depth, span)
 Tested on 4 Alpine sites: CH_DOL, CH_ATT, IT_CER, CH_STT
 
 
-#Installation
+# Installation
 
 bashgit clone https://github.com/MathiMuster/permafrost-ert-analysis.git
 cd permafrost-ert-analysis
@@ -51,7 +53,7 @@ pip install -r requirements.txt
 conda install -c gimli pygimli
 
 
-#Usage
+# Usage
 
 Process a single survey:
 bashpython main.py
@@ -66,7 +68,7 @@ Input data comes from the IDGSP (International Database of Geoelectrical Surveys
 FileContenttopo.txtElectrode positions (GNSS)mesh_node.txtMesh node coordinatesmesh_cell.txtTriangular cell connectivitydata_inv.txtInverted resistivity + coverage index
 Data is not included in this repository. Contact IDGSP for access.
 
-#Dependencies
+# Dependencies
 
 pyGIMLi — geophysical mesh handling and inversion
 
@@ -77,7 +79,7 @@ NumPy, Pandas — data processing
 Matplotlib — visualization
 
 
-#Results
+# Results
 
 The dual-method approach was validated on the CH_ATT_MV1 profile (Les Attelas, Switzerland, 2007–2022):
 
@@ -87,12 +89,12 @@ The Master ROI approach provides a smoother long-term trend
 
 These results are compatible with warming trends documented by PERMOS and MeteoSwiss.
 
-#Limitations
+# Limitations
 
 Fixed parameter set: not yet auto-tuned per profile geometry
 Deep resistive bodies may be under-detected due to coverage penalization
 Resistivity is an indirect indicator; permafrost presence cannot be certified from ERT alone
 
 
-#Reference
+# Reference
 Muster Labeau, M. (2026). Analyse algorithmique des tomogrammes : vers l'automatisation du suivi temporel du permafrost alpin. Bachelor thesis, University of Fribourg.
