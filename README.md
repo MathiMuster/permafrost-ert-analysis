@@ -21,28 +21,19 @@ A density-based clustering algorithm adapted for ERT data. Unlike fixed rectangu
 Repository Structure
 permafrost-ert-analysis/
 ├── main.py            
-
-# Main processing script (single survey)
+ Main processing script (single survey)
 ├── multi_run.py       
-
-# Batch processing over all surveys of a site
+ Batch processing over all surveys of a site
 ├── functions.py       
-
-# Core functions (ROI masking, DBSCAN, metrics)
+Core functions (ROI masking, DBSCAN, metrics)
 ├── master_roi.py      
-
-# Fixed reference point time series analysis
+Fixed reference point time series analysis
 ├── Plot.py            
-
-# Visualization module
-
+Visualization module
 ├── summary_results.csv   
-
-# DBSCAN results per survey
+ DBSCAN results per survey
 ├── summary_master.csv    
-
-# Master ROI results per survey
-
+Master ROI results per survey
 └── requirements.txt
 
 Key Features
