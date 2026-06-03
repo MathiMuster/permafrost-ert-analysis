@@ -16,19 +16,33 @@ The pipeline combines two complementary approaches:
 1. Dynamic segmentation (DBSCAN)
 A density-based clustering algorithm adapted for ERT data. Unlike fixed rectangular ROIs, DBSCAN detects resistive bodies of arbitrary shape while penalizing unreliable deep measurements via coverage-weighted distances.
 2. Fixed reference point tracking (Master ROI)
-Reference centroids are extracted from a baseline survey and projected onto all subsequent surveys, producing a strictly comparable time series free from geometric bias.
-Both methods converge on a ~25% decrease in resistivity at the Les Attelas site (CH_ATT_MV1) over 2007–2022, consistent with documented regional warming trends.
+
 
 Repository Structure
 permafrost-ert-analysis/
-├── main.py            # Main processing script (single survey)
-├── multi_run.py       # Batch processing over all surveys of a site
-├── functions.py       # Core functions (ROI masking, DBSCAN, metrics)
-├── master_roi.py      # Fixed reference point time series analysis
-├── Plot.py            # Visualization module
-├── Tabele.py          # Results table generation
-├── summary_results.csv   # DBSCAN results per survey
-├── summary_master.csv    # Master ROI results per survey
+├── main.py            
+
+# Main processing script (single survey)
+├── multi_run.py       
+
+# Batch processing over all surveys of a site
+├── functions.py       
+
+# Core functions (ROI masking, DBSCAN, metrics)
+├── master_roi.py      
+
+# Fixed reference point time series analysis
+├── Plot.py            
+
+# Visualization module
+
+├── summary_results.csv   
+
+# DBSCAN results per survey
+├── summary_master.csv    
+
+# Master ROI results per survey
+
 └── requirements.txt
 
 Key Features
