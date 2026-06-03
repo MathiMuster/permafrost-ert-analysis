@@ -66,8 +66,11 @@ Data is not included in this repository. Contact IDGSP for access.
 Dependencies
 
 pyGIMLi — geophysical mesh handling and inversion
+
 scikit-learn — DBSCAN clustering
+
 NumPy, Pandas — data processing
+
 Matplotlib — visualization
 
 
@@ -82,7 +85,7 @@ These results are compatible with warming trends documented by PERMOS and MeteoS
 
 Limitations
 
-Fixed parameter set — not yet auto-tuned per profile geometry
+Fixed parameter set: not yet auto-tuned per profile geometry
 Deep resistive bodies may be under-detected due to coverage penalization
 Resistivity is an indirect indicator; permafrost presence cannot be certified from ERT alone
 
