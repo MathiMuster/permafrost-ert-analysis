@@ -3,7 +3,7 @@ Permafrost ERT Analysis
 Automated algorithmic analysis of Electrical Resistivity Tomography (ERT) tomograms
 for temporal monitoring of alpine permafrost degradation.
 
-Bachelor thesis — University of Fribourg, Institute of Geography
+Bachelor thesis: University of Fribourg, Institute of Geography
 Author : Mathilda Muster Labeau
 Supervisor : Dr. Coline Mollaret, Department of Geoscience
 
