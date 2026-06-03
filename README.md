@@ -41,7 +41,8 @@ Temporal tracking with geometric indicators (area, length, depth, span)
 Tested on 4 Alpine sites: CH_DOL, CH_ATT, IT_CER, CH_STT
 
 
-Installation
+#Installation
+
 bashgit clone https://github.com/MathiMuster/permafrost-ert-analysis.git
 cd permafrost-ert-analysis
 pip install -r requirements.txt
@@ -50,7 +51,8 @@ pip install -r requirements.txt
 conda install -c gimli pygimli
 
 
-Usage
+#Usage
+
 Process a single survey:
 bashpython main.py
 Batch process all surveys of a site:
@@ -58,12 +60,13 @@ bashpython multi_run.py
 Run fixed reference point analysis:
 bashpython master_roi.py
 
-Data
+#Data
+
 Input data comes from the IDGSP (International Database of Geoelectrical Surveys on Permafrost). Each survey consists of four files:
 FileContenttopo.txtElectrode positions (GNSS)mesh_node.txtMesh node coordinatesmesh_cell.txtTriangular cell connectivitydata_inv.txtInverted resistivity + coverage index
 Data is not included in this repository. Contact IDGSP for access.
 
-Dependencies
+#Dependencies
 
 pyGIMLi — geophysical mesh handling and inversion
 
@@ -74,7 +77,8 @@ NumPy, Pandas — data processing
 Matplotlib — visualization
 
 
-Results
+#Results
+
 The dual-method approach was validated on the CH_ATT_MV1 profile (Les Attelas, Switzerland, 2007–2022):
 
 Both DBSCAN and Master ROI show a consistent ~25% decrease in mean resistivity over 15 years
@@ -83,12 +87,12 @@ The Master ROI approach provides a smoother long-term trend
 
 These results are compatible with warming trends documented by PERMOS and MeteoSwiss.
 
-Limitations
+#Limitations
 
 Fixed parameter set: not yet auto-tuned per profile geometry
 Deep resistive bodies may be under-detected due to coverage penalization
 Resistivity is an indirect indicator; permafrost presence cannot be certified from ERT alone
 
 
-Reference
+#Reference
 Muster Labeau, M. (2026). Analyse algorithmique des tomogrammes : vers l'automatisation du suivi temporel du permafrost alpin. Bachelor thesis, University of Fribourg.
