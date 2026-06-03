@@ -61,7 +61,7 @@ def multi_run():
     results_ok = []
     results_fail = []
 
-    # dossier de logs (optionnel, mais pratique)
+    
     log_dir = "logs_multi"
     os.makedirs(log_dir, exist_ok=True)
 
